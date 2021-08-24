@@ -11,8 +11,11 @@ const numberOfNotes = [2000, 500, 100, 20, 10, 5, 1];
 
 enterBtn.addEventListener('click', function () {
 	if (billInput.value) {
+		errorMsg.style.display = 'none';
 		cashContainer.style.display = 'block';
 		enterBtn.style.display = 'none';
+	} else {
+		errorMessage('Enter the amount in number');
 	}
 });
 

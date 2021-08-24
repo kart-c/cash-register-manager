@@ -1,13 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
 :root {
-	--primary-color: #cb997e;
+	--primary-color: #00b0ff;
 	--font: 'Roboto Mono', monospace;
+	--secondary-color: #cae0eb;
 }
 
 body {
 	font-family: var(--font);
 	text-align: center;
+	background-color: var(--secondary-color);
 }
 
 h1 {
@@ -27,6 +29,7 @@ input {
 	border-radius: 10px;
 	outline: none;
 	border: 2px solid var(--primary-color);
+	background-color: var(--secondary-color);
 }
 
 input::-webkit-inner-spin-button,
@@ -46,7 +49,7 @@ input::-webkit-outer-spin-button {
 }
 
 .enter:hover {
-	background-color: #d1794a;
+	background-color: #0b6e9c;
 }
 
 .enter:active {
@@ -65,7 +68,7 @@ input::-webkit-outer-spin-button {
 }
 
 .button:hover {
-	background-color: #d1794a;
+	background-color: #0b6e9c;
 }
 
 .button:active {
