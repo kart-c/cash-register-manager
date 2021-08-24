@@ -3,8 +3,18 @@ const cashInput = document.querySelector('#cash-input');
 const checkBtn = document.querySelector('.button');
 const errorMsg = document.querySelector('.error-message');
 const notesToGive = document.querySelectorAll('.notes-to-give');
+const enterBtn = document.querySelector('.enter');
+const cashContainer = document.querySelector('.cash-container');
+const tableContainer = document.querySelector('.table-container');
 
 const numberOfNotes = [2000, 500, 100, 20, 10, 5, 1];
+
+enterBtn.addEventListener('click', function () {
+	if (billInput.value) {
+		cashContainer.style.display = 'block';
+		enterBtn.style.display = 'none';
+	}
+});
 
 checkBtn.addEventListener('click', () => {
 	errorMsg.style.display = 'none';
@@ -12,6 +22,7 @@ checkBtn.addEventListener('click', () => {
 		const bill = parseInt(billInput.value);
 		const cash = parseInt(cashInput.value);
 		if (cash >= bill) {
+			tableContainer.style.display = 'block';
 			const amountToBeGiven = cash - bill;
 			returnAmount(amountToBeGiven);
 			billInput.value = '';

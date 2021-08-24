@@ -34,6 +34,25 @@ input::-webkit-outer-spin-button {
 	-webkit-appearance: none;
 }
 
+.enter {
+	margin: 1rem;
+	padding: 0.5rem 1rem;
+	border-radius: 10px;
+	border: none;
+	cursor: pointer;
+	background-color: var(--primary-color);
+	color: #fff;
+	margin-bottom: 1rem;
+}
+
+.enter:hover {
+	background-color: #d1794a;
+}
+
+.enter:active {
+	background-color: var(--primary-color);
+}
+
 .button {
 	margin: 1rem;
 	padding: 0.5rem 1rem;
@@ -73,4 +92,12 @@ th {
 }
 td {
 	width: 80px;
+}
+
+.cash-container {
+	display: none;
+}
+
+.table-container {
+	display: none;
 }
