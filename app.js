@@ -14,10 +14,13 @@ checkBtn.addEventListener('click', () => {
 		if (cash >= bill) {
 			const amountToBeGiven = cash - bill;
 			returnAmount(amountToBeGiven);
-			errorMessage('Thank you for shopping with us');
+			billInput.value = '';
+			cashInput.value = '';
 		} else {
-			errorMessage('Cash given cannot be less than bill amount');
+			errorMessage('You need more money to to pay the bill');
 		}
+	} else if (billInput.value !== NaN && cashInput !== NaN) {
+		errorMessage('Enter the amount in number');
 	} else {
 		errorMessage('Field cannot be empty');
 	}

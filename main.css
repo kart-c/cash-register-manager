@@ -45,7 +45,15 @@ input::-webkit-outer-spin-button {
 	margin-bottom: 1rem;
 }
 
-.button button:focus-visible {
+.button:hover {
+	background-color: #d1794a;
+}
+
+.button:active {
+	background-color: var(--primary-color);
+}
+
+.button.button:focus-visible {
 	outline: none;
 }
 
@@ -56,6 +64,13 @@ table {
 table,
 th,
 td {
-	border: 1px solid;
+	border: 2px solid var(--primary-color);
 	border-collapse: collapse;
+}
+
+th {
+	width: 130px;
+}
+td {
+	width: 80px;
 }
