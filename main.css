@@ -10,6 +10,7 @@ body {
 	font-family: var(--font);
 	text-align: center;
 	background-color: var(--secondary-color);
+	margin-top: 5rem;
 }
 
 h1 {
@@ -81,6 +82,7 @@ input::-webkit-outer-spin-button {
 
 table {
 	margin: 1.5rem auto;
+	padding: 1rem;
 }
 
 table,
@@ -103,4 +105,33 @@ td {
 
 .table-container {
 	display: none;
+	padding: 0 1rem;
+}
+
+footer {
+	background-color: var(--primary-color);
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding: 1rem;
+}
+
+.footer-social {
+	list-style: none;
+	padding: 0;
+}
+
+.footer-social__links {
+	display: inline-block;
+	padding: 0 1.5rem;
+}
+
+.footer-social__links a {
+	text-decoration: none;
+	color: #fff;
+}
+
+.footer-social__links a:hover {
+	color: #cae0eb;
 }
