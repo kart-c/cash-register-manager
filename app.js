@@ -10,18 +10,20 @@ const tableContainer = document.querySelector('.table-container');
 const numberOfNotes = [2000, 500, 100, 20, 10, 5, 1];
 
 enterBtn.addEventListener('click', function () {
-	if (billInput.value) {
+	errorMsg.style.display = 'block';
+	if (Math.sign(billInput.value) === -1) {
+		billInput.value = '';
+		errorMessage('Enter valid  number');
+	} else if (billInput.value && Math.sign(billInput.value !== -1)) {
 		errorMsg.style.display = 'none';
 		cashContainer.style.display = 'block';
 		enterBtn.style.display = 'none';
-	} else {
-		errorMessage('Enter the amount in number');
 	}
 });
 
 checkBtn.addEventListener('click', () => {
 	errorMsg.style.display = 'none';
-	if (billInput.value && cashInput.value) {
+	if (Math.sign(billInput.value) !== -1 && Math.sign(cashInput.value) !== -1) {
 		const bill = parseInt(billInput.value);
 		const cash = parseInt(cashInput.value);
 		if (cash >= bill) {
@@ -34,7 +36,7 @@ checkBtn.addEventListener('click', () => {
 			errorMessage('You need more money to to pay the bill');
 		}
 	} else if (billInput.value !== NaN && cashInput !== NaN) {
-		errorMessage('Enter the amount in number');
+		errorMessage('Enter valid number');
 	} else {
 		errorMessage('Field cannot be empty');
 	}
